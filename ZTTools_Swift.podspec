@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
 私有工具库，用到的东西都会放到这里，工具库也分为权限、逻辑、UI等
                        DESC
 
-  s.homepage         = 'https://github.com/git/ZTTools_Swift'
+  s.homepage         = 'https://github.com/OCer/ZTTools_Swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Nakiri' => '347464661@qq.com' }
-  s.source           = { :git => 'https://github.com/git/ZTTools_Swift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/OCer/ZTTools_Swift.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '12.0'
 
