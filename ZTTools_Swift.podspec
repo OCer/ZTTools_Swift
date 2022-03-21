@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZTTools_Swift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '工具库Swift版'
 
   s.description      = <<-DESC
