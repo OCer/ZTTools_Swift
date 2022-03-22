@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZTTools_Swift'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '工具库Swift版'
 
   s.description      = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   s.vendored_frameworks = 'ZTTools_Swift/Classes/ZTToolsSDK.framework'
-#  s.frameworks = 'UIKit', 'Foundation', 'Photos', 'UserNotifications', 'AVFoundation', 'CoreGraphics'
+  s.frameworks = 'UIKit', 'Foundation', 'Photos', 'UserNotifications', 'AVFoundation', 'CoreGraphics'
   s.dependency 'Alamofire'
   s.dependency 'SnapKit'
 
