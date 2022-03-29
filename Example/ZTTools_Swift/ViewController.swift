@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ZTToolsSDK
+import ZTTools
 
 class ViewController: UIViewController {
 
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         print(ZTDeviceManager.buildVersion)
         print(ZTDeviceManager.version)
         print(ZTDeviceManager.bundleIdentifier)
+        print(ZTToolBox.sdkVersion())
         print("-------------------------\n\n")
         
         kLog("log")

@@ -1,0 +1,11 @@
+framework module ZTTools {
+  umbrella header "ZTTools.h"
+
+  export *
+  module * { export * }
+}
+
+module ZTTools.Swift {
+    header "ZTTools-Swift.h"
+    requires objc
+}

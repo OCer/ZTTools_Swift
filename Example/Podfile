@@ -1,11 +1,11 @@
 #use_frameworks! # 全局配，也可以每个项目单独配
 
-platform :ios, '12.0'
+platform :ios, '10.0'
 
 # 工作空间名称
 workspace 'ZTTools_Swift.xcworkspace' # 同一个工作空间，多个Project使用pod时，需要添加工作空间名称
 project 'ZTTools_Swift.xcodeproj' # 主工程路径
-project '../ZTToolsSDK/ZTToolsSDK.xcodeproj' # 别的工程路径
+project '../ZTTools/ZTTools.xcodeproj' # 别的工程路径
 
 # 主工程（带podfile的工程）
 target 'ZTTools_Swift_Example' do # target的名字
@@ -17,10 +17,10 @@ target 'ZTTools_Swift_Example' do # target的名字
 end
 
 # 同一个工作空间里面别的项目依赖
-target 'ZTToolsSDK' do
+target 'ZTTools' do
 
-  project '../ZTToolsSDK/ZTToolsSDK.xcodeproj'
+  project '../ZTTools/ZTTools.xcodeproj'
 
-  pod 'Alamofire'
-  pod 'SnapKit'
+ # pod 'Alamofire'
+#  pod 'SnapKit'
 end

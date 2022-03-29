@@ -1,0 +1,278 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTTools
+import Alamofire
+import Foundation
+import Photos
+import SnapKit
+import Swift
+import UIKit
+@_exported import ZTTools
+import _Concurrency
+public typealias ZTNetworkStateChangeBlock = (_ state: Alamofire.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Void
+@_hasMissingDesignatedInitializers final public class ZTNetworkState {
+  public static let sharedNetworkState: ZTTools.ZTNetworkState
+  final public var state: Alamofire.NetworkReachabilityManager.NetworkReachabilityStatus {
+    get
+  }
+  final public var stateString: Swift.String {
+    get
+  }
+  final public var checkNetWorkIsOk: Swift.Bool {
+    get
+  }
+  final public func addNetworkStateChangeBlockWithKey(_ key: Swift.String, block changeBlock: @escaping ZTTools.ZTNetworkStateChangeBlock) -> Swift.Bool
+  final public func removeNetworkStateChangeBlockWithKey(_ key: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+extension Swift.Double {
+  public func convertDecimalNumber(fractionDigits: Swift.Int) -> Swift.String?
+  public func notRounding(fractionDigits: Swift.Int16) -> Swift.String
+  public func inFloor(_ places: Swift.Int) -> Swift.Double
+  public func toFloor(_ places: Swift.Int) -> Swift.String
+  public func toString(_ minF: Swift.Int = 0, maxF: Swift.Int = 10, minI: Swift.Int = 1) -> Swift.String
+  public func toString(fractionDigits: Swift.Int16 = 2) -> Swift.String
+  public func toMultiple(multiole: Swift.Int = 1, def: Swift.Int = 6) -> Swift.String
+  public func divideResultToString(divisor: Swift.Double?, dec: Swift.Int = 3) -> Swift.String
+  public func multiResultToString(multi: Swift.Double?, dec: Swift.Int = 3) -> Swift.String
+  public func toNonZeroString(_ replace: Swift.String = "", minF: Swift.Int = 0, maxF: Swift.Int = 10, minI: Swift.Int = 1) -> Swift.String
+}
+public enum ConstraintAxis : Swift.Int {
+  case horizontal
+  case vertical
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias ConstraintEdgeInsets = UIKit.UIEdgeInsets
+public struct ConstraintArrayDSL {
+  @discardableResult
+  public func prepareConstraints(_ closure: (_ make: SnapKit.ConstraintMaker) -> Swift.Void) -> [SnapKit.Constraint]
+  public func makeConstraints(_ closure: (_ make: SnapKit.ConstraintMaker) -> Swift.Void)
+  public func remakeConstraints(_ closure: (_ make: SnapKit.ConstraintMaker) -> Swift.Void)
+  public func updateConstraints(_ closure: (_ make: SnapKit.ConstraintMaker) -> Swift.Void)
+  public func removeConstraints()
+  public func distributeViewsAlong(axisType: ZTTools.ConstraintAxis, fixedSpacing: CoreGraphics.CGFloat = 0, leadSpacing: CoreGraphics.CGFloat = 0, tailSpacing: CoreGraphics.CGFloat = 0)
+  public func distributeViewsAlong(axisType: ZTTools.ConstraintAxis, fixedItemLength: CoreGraphics.CGFloat = 0, leadSpacing: CoreGraphics.CGFloat = 0, tailSpacing: CoreGraphics.CGFloat = 0)
+  public func distributeSudokuViews(fixedItemWidth: CoreGraphics.CGFloat, fixedItemHeight: CoreGraphics.CGFloat, warpCount: Swift.Int, edgeInset: ZTTools.ConstraintEdgeInsets = .zero)
+  public func distributeSudokuViews(fixedLineSpacing: CoreGraphics.CGFloat, fixedInteritemSpacing: CoreGraphics.CGFloat, warpCount: Swift.Int, edgeInset: ZTTools.ConstraintEdgeInsets = .zero)
+}
+extension Swift.Array {
+  public var snp: ZTTools.ConstraintArrayDSL {
+    get
+  }
+}
+public enum ZTGradientDirection : Swift.Int {
+  case level, vertical, upwardDiagonalLine, downDiagonalLine
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIImage {
+  public func imageType() -> Swift.String?
+  public func scaleImage(scale: CoreGraphics.CGFloat) -> UIKit.UIImage
+  public class func imageWithColor(color: UIKit.UIColor, size: CoreGraphics.CGSize? = nil) -> UIKit.UIImage?
+  public class func getLinearGradientImage(startColor: UIKit.UIColor, endColor: UIKit.UIColor, directionType: ZTTools.ZTGradientDirection, size: CoreGraphics.CGSize) -> UIKit.UIImage
+}
+extension Swift.Array {
+  public func filterDuplicates<E>(_ filter: (Element) -> E) -> [Element] where E : Swift.Equatable
+}
+@_hasMissingDesignatedInitializers public class ZTTimerBlock<T> {
+  @objc deinit
+}
+extension Foundation.Timer {
+  public class func zt_scheduledTimer(withTimeInterval interval: Foundation.TimeInterval, repeats: Swift.Bool, block: @escaping (Foundation.Timer) -> Swift.Void) -> Foundation.Timer
+}
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String)
+  convenience public init(hexString: Swift.String, alpha: CoreGraphics.CGFloat)
+  convenience public init(hex: Swift.UInt, alpha: CoreGraphics.CGFloat = 1.0)
+  public class func dynamicColor(withColorLight light: UIKit.UIColor, dark: UIKit.UIColor?) -> UIKit.UIColor
+}
+@_hasMissingDesignatedInitializers final public class ZTPermissionTools {
+  final public class func checkPhotoLibraryPermission(_ completion: ((_ status: Photos.PHAuthorizationStatus) -> Swift.Void)? = nil)
+  final public class func isOpenMessageNotificationServiceWithBlock(_ completion: ((_ isOpen: Swift.Bool) -> Swift.Void)? = nil)
+  @objc deinit
+}
+public let kRegexEmail: Swift.String
+public let kRegexPhone: Swift.String
+public let kScreenHeight: CoreGraphics.CGFloat
+public let kScreenWidth: CoreGraphics.CGFloat
+public let kIsFullScreen: Swift.Bool
+public let kZTStatusBarHeight: CoreGraphics.CGFloat
+public let kZTNavigationBarHeight: CoreGraphics.CGFloat
+public let kZTTabBarHeight: CoreGraphics.CGFloat
+public let kHomeIndicatorHeight: CoreGraphics.CGFloat
+public func kAdaptW(_ floatValue: CoreGraphics.CGFloat) -> CoreGraphics.CGFloat
+public func kAdaptH(_ floatValue: CoreGraphics.CGFloat) -> CoreGraphics.CGFloat
+public let kDocumentPath: Swift.String?
+public let kTempPath: Swift.String
+public let kCachePath: Swift.String?
+public let kTag: Swift.Int
+public let kHUBTime: Swift.Float
+public let kTimeFormate: Swift.String
+public let kNotificationWithChangeLanguage: Swift.String
+public func kAddChangeLanguageNotification(observer: Any, selector: ObjectiveC.Selector)
+public func kRemoveChangeLanguageNotification(observer: Any)
+public func kLocalizedString(key: Swift.String, value: Swift.String? = nil, table: Swift.String? = nil) -> Swift.String
+public func kLog(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n")
+@available(iOS 13.0, *)
+public typealias ZTDarkModeChangeBlock = (_ mode: UIKit.UIUserInterfaceStyle) -> Swift.Void
+@_hasMissingDesignatedInitializers @available(iOS 13.0, *)
+final public class ZTDarkModeManager {
+  public static let sharedManager: ZTTools.ZTDarkModeManager
+  final public var currentMode: UIKit.UIUserInterfaceStyle {
+    get
+    set
+  }
+  final public func setMode(mode: UIKit.UIUserInterfaceStyle, _ block: ZTTools.ZTDarkModeChangeBlock? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ZTToolBox {
+  final public class func numberOfRegex(regex: Swift.String, and text: Swift.String, isCaseInsensitive: Swift.Bool = true) -> Swift.Int
+  final public class func regex(regex: Swift.String, and text: Swift.String, isCaseInsensitive: Swift.Bool = true) -> Swift.Array<Swift.String>
+  final public class func createURL(url: Swift.String?) -> Foundation.URL
+  final public class func getJSONStringFromDictionary(dictionary: Swift.Dictionary<Swift.String, Any>) -> Swift.String
+  final public class func getJSONStringFromData(data: Foundation.Data) -> Swift.String
+  final public class func getDictionaryFromJSONString(jsonString: Swift.String) -> Swift.Dictionary<Swift.String, Any>
+  final public class func getDictionaryFromJSONData(jsonData: Foundation.Data) -> Swift.Dictionary<Swift.String, Any>
+  final public class func getError(title: Swift.String?, message: Swift.String?, text: Swift.String?, code: Swift.Int) -> Foundation.NSError
+  final public class func getFileSizeWithPath(path: Swift.String) -> Swift.Int
+  final public class func fileSizeToString(fileSize: Swift.UInt64) -> Swift.String
+  final public class func checkUserIdCard(idCard: Swift.String) -> Swift.Bool
+  final public class func createCollectionWithTitle(_ title: Swift.String) -> Photos.PHAssetCollection?
+  final public class func saveImageToAlbumWithImage(_ image: UIKit.UIImage, assetCollection: Photos.PHAssetCollection, completionBlock: ((_ error: Swift.Error?) -> Swift.Void)?)
+  final public class func saveImageSynchronousToAlbumWithImage(_ image: UIKit.UIImage, assetCollection: Photos.PHAssetCollection, completionBlock: (() -> Swift.Void)?)
+  final public class func saveVideoToAlbumWithURL(_ url: Foundation.URL, assetCollection: Photos.PHAssetCollection, completionBlock: ((_ error: Swift.Error?) -> Swift.Void)?)
+  final public class func saveVideoSynchronousToAlbumWithURL(_ url: Foundation.URL, assetCollection: Photos.PHAssetCollection, completionBlock: (() -> Swift.Void)?)
+  final public class func resetObject(obj: ObjectiveC.NSObject)
+  final public class func sdkVersion() -> Swift.String
+  @objc deinit
+}
+public enum ZTLanguageType : Swift.Int {
+  case system, cn, en
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class ZTLanguageManager {
+  public static let sharedManager: ZTTools.ZTLanguageManager
+  final public var index: Swift.Int {
+    get
+  }
+  final public func getCurrentLanguageCode() -> Swift.String
+  final public func getCurrentLanguageName() -> Swift.String
+  final public func updateLanguageWithType(_ type: ZTTools.ZTLanguageType)
+  final public func localizedStringForKey(key: Swift.String, value: Swift.String? = nil, table: Swift.String? = nil) -> Swift.String
+  final public class func languageTypeToString(type: ZTTools.ZTLanguageType) -> Swift.String
+  final public class func getPreferredLanguage() -> Swift.String
+  @objc deinit
+}
+extension Swift.String {
+  public subscript(r: Swift.Range<Swift.Int>) -> Swift.String? {
+    get
+  }
+  public subscript(index: Swift.Int) -> Swift.Character? {
+    get
+  }
+  public func substring(_ location: Swift.Int, length: Swift.Int) -> Swift.String?
+  public func substingInRange(_ r: Swift.Range<Swift.Int>) -> Swift.String?
+  public func substingInRange(_ r: Swift.Range<Swift.String.Index>) -> Swift.String?
+  public func subString(def: Swift.Int = 8) -> Swift.String
+  public func location(_ substring: Swift.String) -> Swift.Int
+  public func isContain(_ substring: Swift.String) -> Swift.Bool
+  public func isOnlyNumbers() -> Swift.Bool
+  public func isOnlySpaces() -> Swift.Bool
+  public func isOnlySpecialCharacter() -> Swift.Bool
+  public func isOnlySameOne() -> Swift.Bool
+  public func isOnlyLetters() -> Swift.Bool
+  public func isAlphanum() -> Swift.Bool
+  public func insertCharByInterval(_ char: Swift.String, interval: Swift.Int) -> Swift.String
+  public func toDouble(_ def: Swift.Double = 0.0, decimal: Swift.Int? = nil) -> Swift.Double
+  public func toFloat(_ def: Swift.Float = 0.0) -> Swift.Float
+  public func toInt(_ def: Swift.Int = 0) -> Swift.Int
+  public func toBool(_ def: Swift.Bool = false) -> Swift.Bool
+  public func removeDecimalZero() -> Swift.String
+  public func URLEncodedString() -> Swift.String
+  public func URLDecodedString() -> Swift.String
+  public func toNSRange(_ range: Swift.Range<Swift.String.Index>) -> Foundation.NSRange
+  public func toRange(_ range: Foundation.NSRange) -> Swift.Range<Swift.String.Index>?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ZTTextView : UIKit.UITextView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var canBecomeFirstResponder: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ZTDeviceManager {
+  public static let systemVersion: Swift.String
+  public static let buildVersion: Swift.String
+  public static let version: Swift.String
+  public static let bundleIdentifier: Swift.String
+  public static let appName: Swift.String
+  public static let platformString: Swift.String
+  final public class func getKeyWindow() -> UIKit.UIWindow?
+  final public class func isFullScreen() -> Swift.Bool
+  final public class func vibration()
+  final public class func vibrationWithSwitch()
+  final public class func vibrationWithDone(type: UIKit.UINotificationFeedbackGenerator.FeedbackType = .success)
+  final public class func totalDiskSpace() -> Swift.Double
+  final public class func freeDiskSpace() -> Swift.Double
+  final public class func playCameraSound()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ZTTimeTools {
+  final public class func getTimeText(currentTime: Foundation.TimeInterval) -> Swift.String
+  final public class func getSystemNowTime(formatter: Swift.String) -> Swift.String
+  final public class func getTimeInterval(startTime: Swift.String, endTime: Swift.String, formatter: Swift.String) -> Swift.Int
+  final public class func getTimeStringWithDDHHMMSS(seconds: Swift.Int, marginString: Swift.String) -> Swift.String
+  final public class func getTimeStringWithDHHMMSS(seconds: Swift.Int, marginString: Swift.String) -> Swift.String
+  final public class func getTimeStringWithHHMMSS(seconds: Swift.Int, marginString: Swift.String) -> Swift.String
+  final public class func getNowTimeStamp() -> Swift.String
+  final public class func getNowTimeStampWithMillisecond() -> Swift.String
+  final public class func timeStampToString(timeStamp: Swift.Int, outputFormatter: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func getLastView() -> UIKit.UIView
+  @_Concurrency.MainActor(unsafe) public func removeAllSubviews()
+}
+extension ObjectiveC.NSObject {
+  public func objectAddress() -> Swift.String
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func addLineSpace(_ lineSpacing: CoreGraphics.CGFloat, withText text: Swift.String?)
+}
+@_hasMissingDesignatedInitializers final public class ZTUITools {
+  final public class func screenHeight() -> CoreGraphics.CGFloat
+  final public class func getCurrentVCForView(view: UIKit.UIView) -> UIKit.UIViewController?
+  final public class func getCurrentVCForWindow() -> UIKit.UIViewController?
+  final public class func getVisibleVC() -> UIKit.UIViewController?
+  final public class func getCurrentVC() -> UIKit.UIViewController?
+  final public class func getVisibleNC() -> UIKit.UINavigationController?
+  final public class func getCurrentNC() -> UIKit.UINavigationController?
+  @objc deinit
+}
+extension Foundation._NSRange {
+  public func toRange(_ range: Foundation.NSRange, text: Swift.String) -> Swift.Range<Swift.String.Index>
+  public func toRange(_ range: Foundation.NSRange) -> Swift.Range<Swift.Int>
+}
+extension ZTTools.ConstraintAxis : Swift.Equatable {}
+extension ZTTools.ConstraintAxis : Swift.Hashable {}
+extension ZTTools.ConstraintAxis : Swift.RawRepresentable {}
+extension ZTTools.ZTGradientDirection : Swift.Equatable {}
+extension ZTTools.ZTGradientDirection : Swift.Hashable {}
+extension ZTTools.ZTGradientDirection : Swift.RawRepresentable {}
+extension ZTTools.ZTLanguageType : Swift.Equatable {}
+extension ZTTools.ZTLanguageType : Swift.Hashable {}
+extension ZTTools.ZTLanguageType : Swift.RawRepresentable {}
