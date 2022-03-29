@@ -1,0 +1,3 @@
+[submodule "ZTTools"]
+	path = ZTTools
+	url = git@github.com:OCer/ZTToolsSDK_Swift.git
