@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1330"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,6 +17,20 @@
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "ZTTools_Swift_Example.app"
                BlueprintName = "ZTTools_Swift_Example"
+               ReferencedContainer = "container:ZTTools_Swift.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "ZTTools_Swift_Tests.xctest"
+               BlueprintName = "ZTTools_Swift_Tests"
                ReferencedContainer = "container:ZTTools_Swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -37,6 +51,16 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "ZTTools_Swift_Tests.xctest"
+               BlueprintName = "ZTTools_Swift_Tests"
+               ReferencedContainer = "container:ZTTools_Swift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

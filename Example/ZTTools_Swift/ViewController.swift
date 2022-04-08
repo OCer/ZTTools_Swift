@@ -24,9 +24,9 @@ class ViewController: UIViewController {
     }
 
     @objc private func test() {
-        print(ZTDeviceManager.buildVersion)
-        print(ZTDeviceManager.version)
-        print(ZTDeviceManager.bundleIdentifier)
+        print(ZTDeviceTools.buildVersion)
+        print(ZTDeviceTools.version)
+        print(ZTDeviceTools.bundleIdentifier)
         print(ZTToolBox.sdkVersion())
         print("-------------------------\n\n")
         

@@ -1,0 +1,6 @@
+framework module ZTTools_Swift {
+  umbrella header "ZTTools_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

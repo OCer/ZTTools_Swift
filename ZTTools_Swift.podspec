@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'ZTTools_Swift/Classes/ZTTools.xcframework'
   
   s.frameworks = 'UIKit', 'Foundation', 'Photos', 'UserNotifications', 'AVFoundation', 'CoreGraphics'
-#  s.dependency 'Alamofire'
-#  s.dependency 'SnapKit'
+  s.dependency 'Alamofire'
+  s.dependency 'SnapKit'
 
 end
