@@ -16,9 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01AD716053D73839676F7048 /* Pods-ZTTools_Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTTools_Swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZTTools_Swift_Tests/Pods-ZTTools_Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		041F744829734849C635861B /* Pods-ZTTools_Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTTools_Swift_Example.release.xcconfig"; path = "Target Support Files/Pods-ZTTools_Swift_Example/Pods-ZTTools_Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0C8AE7044D1CA7B2A464A190 /* Pods_ZTTools_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZTTools_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B0A479287BEAE5037333B7 /* Pods_ZTTools_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZTTools_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F728D0F52FE5A03C1CC2078 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZTTools_Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTTools_Swift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,7 +26,6 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		761695DDF511C1F3B072B2D2 /* Pods-ZTTools_Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTTools_Swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZTTools_Swift_Tests/Pods-ZTTools_Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ABEF7F2CDECD4C36B53C47A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B070E1686E50AA42E532A906 /* ZTTools_Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZTTools_Swift.podspec; path = ../ZTTools_Swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E0BE66C5FAA06AF8B76876F6 /* Pods-ZTTools_Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTTools_Swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZTTools_Swift_Example/Pods-ZTTools_Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +99,6 @@
 			children = (
 				E0BE66C5FAA06AF8B76876F6 /* Pods-ZTTools_Swift_Example.debug.xcconfig */,
 				041F744829734849C635861B /* Pods-ZTTools_Swift_Example.release.xcconfig */,
-				01AD716053D73839676F7048 /* Pods-ZTTools_Swift_Tests.debug.xcconfig */,
-				761695DDF511C1F3B072B2D2 /* Pods-ZTTools_Swift_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,7 +106,6 @@
 		C7CB8CD76E49FEEA49F1E598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C8AE7044D1CA7B2A464A190 /* Pods_ZTTools_Swift_Tests.framework */,
 				25B0A479287BEAE5037333B7 /* Pods_ZTTools_Swift_Example.framework */,
 			);
 			name = Frameworks;
@@ -311,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -357,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -371,7 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZTTools_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -387,7 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZTTools_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

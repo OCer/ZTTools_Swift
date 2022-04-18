@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (5.5.0)
-  - SnapKit (5.0.1)
-  - ZTTools_Swift (0.1.3):
+  - Alamofire (5.6.1)
+  - SnapKit (5.6.0)
+  - ZTTools_Swift (0.1.4):
     - Alamofire
     - SnapKit
 
@@ -20,10 +20,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  ZTTools_Swift: 570408b08b519f3f0fa1f39559147ff786a5f406
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  ZTTools_Swift: 57e1503e2d0f9adc6cee60e3bed58bf974d388c7
 
-PODFILE CHECKSUM: 05e691d2b00995ecfce3579d7d453dfb455b0298
+PODFILE CHECKSUM: 4259955e7c72a48aa1a182312aa99b8d8a212ca1
 
 COCOAPODS: 1.11.3
