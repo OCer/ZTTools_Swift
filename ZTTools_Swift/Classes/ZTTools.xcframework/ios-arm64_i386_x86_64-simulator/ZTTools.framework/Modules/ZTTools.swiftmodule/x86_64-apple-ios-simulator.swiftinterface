@@ -75,7 +75,6 @@ public let kNotificationWithChangeLanguage: Swift.String
 public func kAddChangeLanguageNotification(observer: Any, selector: ObjectiveC.Selector)
 public func kRemoveChangeLanguageNotification(observer: Any)
 public func kLocalizedString(key: Swift.String, value: Swift.String? = nil, table: Swift.String? = nil) -> Swift.String
-public func kLog(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n")
 public enum ZTGradientDirection : Swift.Int {
   case level, vertical, upwardDiagonalLine, downDiagonalLine
   public init?(rawValue: Swift.Int)

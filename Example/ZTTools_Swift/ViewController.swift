@@ -28,8 +28,6 @@ class ViewController: UIViewController {
         print(ZTDeviceTools.version)
         print(ZTDeviceTools.bundleIdentifier)
         print(ZTToolBox.sdkVersion())
-        print("-------------------------\n\n")
-        
-        kLog("log")
+        print("-------------------------")
     }
 }
